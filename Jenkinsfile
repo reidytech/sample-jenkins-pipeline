@@ -11,7 +11,7 @@ node {
 
 
 pipeline {
-    agemt { label: 'jenkins_agent'}
+    agent { label: 'jenkins_agent'}
     stages {
         stage('Initialization') {
             agent { label 'jenkins_agent' }
