@@ -12,19 +12,19 @@ node {
 
 pipeline {
     agent{ label: 'devdeployer' }
-}
 
-stages {
-    stage('Initialization') {
-        agent { label 'devdeployer' }
-    }
-    steps {
-        env.APP_NAME = "${params.APP_NAME}"
+    stages {
+        stage('Initialization') {
+            agent { label 'devdeployer' }
+        }
+        steps {
+            env.APP_NAME = "${params.APP_NAME}"
 
-        script {
-            sh '''#!/bin/bash
-                echo ${APP_NAME}
-            '''
+            script {
+                sh '''#!/bin/bash
+                    echo ${APP_NAME}
+                '''
+            }
         }
     }
 }
