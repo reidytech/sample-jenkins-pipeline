@@ -11,11 +11,10 @@ node {
 
 
 pipeline {
-    agent{ label: 'devdeployer' }
 
     stages {
         stage('Initialization') {
-            agent { label 'devdeployer' }
+            agent { label 'jenkins_agent' }
         }
         steps {
             env.APP_NAME = "${params.APP_NAME}"
