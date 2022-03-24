@@ -23,7 +23,7 @@ pipeline {
                     '''
                 }
                 echo 'Hello World'
-                sayHello
+                sayHello()
             }
         }
     }
