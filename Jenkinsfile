@@ -2,15 +2,15 @@
 
 pipeline {
     agent any
-
-    stage('Initialization') {
-        steps {
-            env.APP_NAME = "Chris"
-            env.TERRAGUARD = true
+   stages {
+        stage('Initialization') {
+            steps {
+                env.APP_NAME = "Chris"
+                env.TERRAGUARD = true
+            }
         }
-    }
 
-    stages {
+ 
         stage('Hello') {
             steps {
                 dir('app') {
