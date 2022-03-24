@@ -5,8 +5,11 @@ pipeline {
    stages {
         stage('Initialization') {
             steps {
-                env.APP_NAME = "Chris"
-                env.TERRAGUARD = true
+                script {
+                    env.APP_NAME = "Chris"
+                    env.TERRAGUARD = true
+                }
+ 
             }
         }
 
