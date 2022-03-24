@@ -13,7 +13,7 @@ pipeline {
                     '''
                 }
                 echo 'Hello World'
-                sayHello scm
+                sayHello 'Chris'
             }
         }
     }
